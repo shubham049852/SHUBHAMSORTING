@@ -1,0 +1,43 @@
+#include<iostream.h>
+#include<conio.h>
+
+int linearsearch(int ar[],int ele, int val)
+{
+        for (int i = 0; i < ele; i ++)
+    {
+        if (ar[i]== val)
+        {
+            return ( i+1);
+
+        }
+
+    }
+            return -1;
+}
+
+int main()
+{
+    clrscr();
+    int ar[20], ele, val, pos;
+
+    cout<<"Enter the number of elements";
+    cin>>ele;
+
+    cout<<"Enter the entries " ;
+    for (int i = 0; i < ele; i ++)
+    {
+        cin >> ar[i];
+    }
+
+    cout<<"Enter the element to be searched for" ;
+    cin>> val;
+    pos = linearsearch(ar,ele,val);
+
+    if (pos!= -1 )
+        cout<<"Element found at " << pos <<" position";
+    else
+        cout<<"Element not found";
+        
+    getch();    
+    return 0;
+}
